@@ -1,2 +1,22 @@
-# https-abo-albaraa-max.github.io
-MIRQAM Android App Links
+# مِرقَام للجوال (PWA → APK) — النسخة النهائية
+
+## الملفات (لا تغيّر أسماءها)
+`index.html` (التطبيق) • `sw.js` (العمل بلا إنترنت والإشعارات) • `manifest.webmanifest` (بطاقة التطبيق) • `icon-192.png` و`icon-512.png` (الأيقونة)
+
+## الخطوات
+1. GitHub: أنشئ مستودعاً **Public** باسم `mirqaam` ← Add file ← Upload files ← ارفع الملفات الخمسة ← Commit.
+2. Settings ← Pages ← Branch: main ← Save. بعد دقيقة يظهر رابطك: `https://اسمك.github.io/mirqaam/`
+3. افتح `pwabuilder.com` ← الصق الرابط ← Start ← Package for stores ← Android ← Generate Package.
+4. ينزل ملف ZIP فيه `.apk` ومفتاح التوقيع (**احتفظ به** لتحديث التطبيق لاحقاً). أرسل الـ APK على تليجرام وثبّته (فعّل «السماح بالتثبيت من هذا المصدر»).
+5. آيفون: افتح الرابط في Safari ← مشاركة ← إضافة إلى الشاشة الرئيسية.
+
+## تحديث التطبيق لاحقاً
+ارفع الملفات الجديدة فوق القديمة في GitHub، وغيّر رقم النسخة في أول سطر من `sw.js` (مثل `mirqaam-v8` ← `mirqaam-v9`). يتحدث عند المستخدمين تلقائياً دون إعادة بناء الـ APK.
+
+## الدخول بحساب Google
+بعد النشر: console.cloud.google.com ← مشروع جديد ← OAuth consent screen (External + بريدك مستخدماً تجريبياً) ← Credentials ← OAuth client ID ← **Web application** ← Authorized JavaScript origins: `https://اسمك.github.io` (بلا مسار) ← انسخ Client ID والصقه في التطبيق: الإعدادات ← Google Client ID. (العنوان المطلوب يظهر لك في الإعدادات نفسها.)
+
+## ملاحظات صريحة
+- الإشعارات تصل والتطبيق مفتوح أو في الخلفية. وعند الإغلاق التام أحاول إيصالها عبر مزامنة الخلفية، لكن أندرويد لا يضمن ذلك.
+- المرفقات تُحفظ على الجهاز (حتى 25MB للملف) ولا تدخل في النسخة الاحتياطية JSON.
+- الخطوط الجميلة تحتاج إنترنت أول مرة ثم تعمل بدونه.
