@@ -1,0 +1,10 @@
+[{
+  "relation": ["delegate_permission/common.handle_all_urls"],
+  "target": {
+    "namespace": "android_app",
+    "package_name": "io.github.abo_albaraa_max.twa",
+    "sha256_cert_fingerprints": [
+      "93:99:37:96:C3:10:79:52:75:9A:7B:B1:B3:1E:EB:F0:F5:5F:67:91:CD:94:A6:90:21:9F:9A:C1:CE:67:F9:C7"
+    ]
+  }
+}]
